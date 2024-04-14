@@ -1,3 +1,7 @@
+import '@fontsource/roboto';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import { Router } from './Router';
