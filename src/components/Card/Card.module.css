@@ -1,0 +1,74 @@
+.root {
+  position: relative;
+  width: rem(450);
+  height: rem(490);
+  background-color: var(--card-background);
+  border-radius: rem(32);
+  border: 2px solid #ffffff0d;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  padding-top: rem(32);
+  padding-left: rem(32);
+  padding-right: rem(32);
+  padding-bottom: rem(16);
+}
+
+.firstLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.difference {
+  width: rem(155);
+  height: rem(55);
+  border: 2px solid var(--red-difference-border);
+  border-radius: rem(32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(8);
+  padding-inline: rem(20);
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  /* background-color: var(--red-difference-bg);s */
+  box-shadow: var(--red-difference-shadow);
+  background: #2eeb86;
+  /* background: radial-gradient(at left top, #2eeb86, #29d57800); */
+
+  background: linear-gradient(180deg, #2eeb86, #29d57800);
+}
+
+.title {
+  font-size: rem(24);
+  line-height: rem(32);
+  color: var(--title-color);
+}
+
+.number {
+  font-size: rem(24);
+  line-height: rem(32);
+  color: var(--red-difference);
+}
+
+.quantity {
+  font-size: rem(48);
+  font-weight: 500;
+  line-height: rem(54);
+  color: var(--number-color);
+}
+
+.comment {
+  margin-top: rem(8);
+  font-size: rem(24);
+  line-height: rem(32);
+  color: var(--comment-color);
+}
+
+.chart {
+  background-color: green;
+}
