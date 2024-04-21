@@ -1,13 +1,11 @@
 import { Box } from '@mantine/core';
 import { CardProps, Card } from '@/components/Card/Card';
-import { newUsersStat } from '@/mockdata';
-
+import { bars } from '@/mockdata';
 import classes from './Homepage.module.css';
 
 const defaultCardData: CardProps = {
-  statisticData: newUsersStat,
+  barsData: bars,
   cardTitle: 'New users',
-  comment: 'Last 30 days',
 };
 
 export function HomePage() {

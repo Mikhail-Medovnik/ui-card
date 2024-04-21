@@ -1,18 +1,20 @@
 import { Box, Text } from '@mantine/core';
 import { IconArrowDown } from '@tabler/icons-react';
-import { StatisticItem } from '@/types/card-types';
+import { ChartItem } from './ChartItem.tsx/ChartItem';
+import { ChartBarsData } from '@/types/types';
 
 import classes from './Card.module.css';
 
 export interface CardProps {
-  statisticData: StatisticItem[];
+  barsData: ChartBarsData[];
   cardTitle: string;
-  comment: string;
 }
 
-export function Card({ statisticData, cardTitle, comment }: CardProps) {
+export function Card({ barsData, cardTitle }: CardProps) {
+  const chartBars = barsData.map((bar) => <ChartItem key={bar.id} height={bar.diff} />);
   return (
     <Box className={classes.root}>
+      <Box className={classes.gradientLayer}></Box>
       <Box className={classes.info}>
         <Box className={classes.firstLine}>
           <Text component="h3" className={classes.title}>
@@ -28,7 +30,7 @@ export function Card({ statisticData, cardTitle, comment }: CardProps) {
           <Text className={classes.comment}>Since last 30 days</Text>
         </Box>
       </Box>
-      <Box className={classes.chart}></Box>
+      <Box className={classes.chart}>{chartBars}</Box>
     </Box>
   );
 }

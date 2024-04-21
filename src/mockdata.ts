@@ -1,6 +1,30 @@
-import { StatisticItem } from './types/card-types';
+import { ChartBarsData } from './types/types';
 
-export const newUsersStat: StatisticItem[] = [
-  { value: 100, diff: -4 },
-  { value: 1983, diff: -19 },
+export const bars: ChartBarsData[] = [
+  { id: 1, diff: 20 },
+  { id: 2, diff: 75 },
+  { id: 3, diff: 68 },
+  { id: 4, diff: 84 },
+  { id: 5, diff: 66 },
+  { id: 6, diff: 31 },
+  { id: 7, diff: 93 },
+  { id: 8, diff: 45 },
+  { id: 9, diff: 52 },
+  { id: 10, diff: 80 },
+  { id: 11, diff: 75 },
+  { id: 12, diff: 57 },
+  { id: 13, diff: 84 },
+  { id: 14, diff: 54 },
+  { id: 15, diff: 48 },
+  { id: 16, diff: 92 },
+  { id: 17, diff: 38 },
+  { id: 18, diff: 65 },
+  { id: 19, diff: 59 },
+  { id: 20, diff: 50 },
+  { id: 21, diff: 85 },
+  { id: 22, diff: 52 },
+  { id: 23, diff: 89 },
+  { id: 24, diff: 70 },
+  { id: 25, diff: 47 },
+  { id: 26, diff: 36 },
 ];

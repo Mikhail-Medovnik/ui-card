@@ -1,0 +1,42 @@
+.root {
+  position: relative;
+  height: 100%;
+  width: rem(4);
+  border-top-right-radius: rem(3);
+  border-top-left-radius: rem(3);
+  background: transparent;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  border-top-right-radius: rem(3);
+  border-top-left-radius: rem(3);
+
+  transition: background 300ms ease;
+
+  &:hover {
+    cursor: pointer;
+    background: var(--chart-hovered-color);
+
+    .triangle {
+      width: 17px;
+      height: 16px;
+      opacity: 1;
+    }
+  }
+}
+
+.triangle {
+  position: absolute;
+  transform: translate(-5.6px, -22px);
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  transition: opacity 300ms ease;
+}

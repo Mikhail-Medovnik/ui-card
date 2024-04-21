@@ -1,13 +1,35 @@
+$border-color: #ffffff0d;
+$border: 2px solid $border-color;
+$border-radius: rem(32);
+
 .root {
   position: relative;
   width: rem(450);
   height: rem(490);
-  background-color: var(--card-background);
-  border-radius: rem(32);
-  border: 2px solid #ffffff0d;
+  /* background-color: var(--card-background); */
+  border-radius: $border-radius;
+  /* border-left: $border;
+  border-right: $border;
+  border-bottom: $border; */
+  /* background: radial-gradient(at 50% 50%, #ffffff54 0%, #ffffff0d 60%) no-repeat 50% 0 / 100% 100%; */
+  border: double 4px transparent;
+  background-image: linear-gradient(var(--card-background), var(--card-background)),
+    radial-gradient(circle at top center, #ffffff54 0%, $border-color 25%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 
   display: flex;
   flex-direction: column;
+}
+
+.gradientLayer {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: 2px;
+  border-radius: $border-radius;
+  z-index: -1;
 }
 
 .info {
@@ -35,12 +57,11 @@
   padding-inline: rem(20);
   padding-top: rem(20);
   padding-bottom: rem(20);
-  /* background-color: var(--red-difference-bg);s */
+  background-color: var(--red-difference-bg);
   box-shadow: var(--red-difference-shadow);
-  background: #2eeb86;
-  /* background: radial-gradient(at left top, #2eeb86, #29d57800); */
 
-  background: linear-gradient(180deg, #2eeb86, #29d57800);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .title {
@@ -70,5 +91,9 @@
 }
 
 .chart {
-  background-color: green;
+  padding-top: rem(25);
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
 }

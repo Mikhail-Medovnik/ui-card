@@ -10,7 +10,7 @@ export const theme = createTheme({
     commentColor: '#414141',
     titleColor: '#727272',
     chartColor: '#292929',
-    chartHoveredColor: '#383838',
+    chartHoveredColor: 'linear-gradient(180deg, rgba(124, 124, 124, 1), rgba(124, 124, 124, 0))',
     redTriangleColor: '#c0303a',
     redDifference: '#e93645',
     redDifferenceBg: 'rgba(233, 54, 69, 0.03)',
